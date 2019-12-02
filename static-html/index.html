@@ -26,6 +26,46 @@
 			}
 
 			logInfo('Graz to London');
+
+			function Person(id, firstname, name) {
+				this.firstname = firstname;
+				this.name = name;
+
+				this.fullName = function() {
+					return id + ': ' + firstname + ' ' + name;
+				}
+			}
+
+			var herbert = new Person(11, 'Herbert', 'Huber');
+			console.log(herbert.firstname);
+			console.log(herbert.name);
+			console.log(herbert.fullName());
+
+			class Passenger {
+				constructor(id, firstname, name) {
+					this.id = id;
+					this.firstname = firstname;
+					this.name = name;
+				}
+
+				fullName() {
+					return this.id + ': ' + this.firstname + ' ' + this.name;
+				}
+			}
+
+			var heinz = new Passenger(9, 'Heinz', 'Mayer');
+			console.log(heinz.fullName());
+
+			function printValue(value) {
+				console.log(value);
+			}
+
+			var logItNow = value => console.log(value);
+			var directLog = console.log;
+
+			printValue('my string');
+			logItNow('my string');
+			directLog('my string');
 		</script>
 		<h1
 			myFlightStatus
