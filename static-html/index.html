@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Flight Search</title>
+		<style>
+			h1 {
+				font-size: 10px;
+			}
+
+			[myFlightStatus].custom-size {
+				font-size: 30px;
+			} 
+
+			h1[myFlightStatus].custom-size {
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function logInfo(infoText) {
+				console.log('This is our flight search app', infoText);
+			}
+
+			logInfo('Graz to London');
+		</script>
+		<h1 myFlightStatus style="border: 3px solid blue" class="custom-size active">My Flight Search</h1>
+	</body>
+</html>
