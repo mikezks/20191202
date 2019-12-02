@@ -21,8 +21,21 @@
 				console.log('This is our flight search app', infoText);
 			}
 
+			function changeText(text) {
+				document.getElementById('textParagraph').innerHTML = text;
+			}
+
 			logInfo('Graz to London');
 		</script>
-		<h1 myFlightStatus style="border: 3px solid blue" class="custom-size active">My Flight Search</h1>
+		<h1
+			myFlightStatus
+			style="border: 3px solid blue"
+			class="custom-size active">
+			My Flight Search</h1>
+		<p id="textParagraph">My text about flightS.</p>
+		<button
+			onclick="changeText('My new text')">
+			Change Text
+		</button>
 	</body>
 </html>
