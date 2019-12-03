@@ -66,6 +66,38 @@
 			printValue('my string');
 			logItNow('my string');
 			directLog('my string');
+
+			function Person2(id, firstname, name) {
+				this.id = id;
+				this.firstname = firstname;
+				this.name = name;
+			}
+
+			Person2.prototype.fullName = function () {
+				return this.firstname + " " + this.name;
+			}
+
+			const peter = new Person(1, 'Peter', 'Bauer');
+			const mary = new Person(2, 'Mary', 'Taylor');
+
+			function Employee(id, firstname, name, department) {
+				Person2.call(this, id, firstname, name);
+				this.department = department;
+			}
+			
+			Employee.prototype = new Person2();
+
+			Employee.prototype.change = function(newDepartment) {
+				console.debug(this.fullName() + ' changes to ' + newDepartment);
+				this.department = newDepartment;
+			}
+
+
+			var employee = new Employee(1, 'John', 'Doe', 'Management');
+			console.debug('Employee', employee.department, employee);
+			console.debug('Employee', employee.department, employee);
+			employee.change('Dev');
+			console.debug('After change', employee);
 		</script>
 		<h1
 			myFlightStatus
