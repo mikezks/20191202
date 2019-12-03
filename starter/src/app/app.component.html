@@ -1,0 +1,14 @@
+<h1>
+  Hello {{ name }}!
+</h1>
+<p>
+  My first Angular App! :)
+  <input [(ngModel)]="name">
+</p>
+<button
+  mat-raised-button
+  color="primary"
+  [disabled]="!valid"
+  (click)="showMsg()">Alert</button>
+  <mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider>
+<router-outlet></router-outlet>
